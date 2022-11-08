@@ -14,9 +14,4 @@ jobs:
       - name: npm install and npm test
         run: |
           npm install
-          make test-coverage
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          npm tes
