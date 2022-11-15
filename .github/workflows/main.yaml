@@ -14,6 +14,7 @@ jobs:
       - name: npm install and npm test
         run: |
           npm install
+          npm install -g mocha
           mocha ./test/* 
           make test-coverage
 
