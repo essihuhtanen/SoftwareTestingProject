@@ -1,6 +1,20 @@
-# Student template
+# Project repository for Software Testing (COMP.SE.200)
 
-## Purpose of this repository
+This is a student implementation for software testing course in Tampere University (fall 2022).
+
+The repository contains a project template created by the course (https://github.com/otula/COMP.SE.200-2022-2023-1). For information about the licences and usage of these files, please see [below](#student-template).
+
+The contributors of the project (@essihuhtanen and [@miiahonk](https://github.com/miiahonk)) have created the unit tests, coverage reporting and the simple CI pipeline (GitHub Actions) for the project.
+
+#
+
+## Student template
+
+The src folder of this project is entirely originated from a student template project. Below you can see the contents of the template's readme.
+
+[Link to the repository](https://github.com/otula/COMP.SE.200-2022-2023-1)
+
+### Original README
 
 This is a project template for students participating in Software Testing course
 at Tampere University.
