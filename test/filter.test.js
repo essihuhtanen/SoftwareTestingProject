@@ -3,7 +3,8 @@ import filter from "../src/filter.js";
 const expect = chai.expect;
 
 const arr1 = [{'product' : 'cheese', 'available' : true},    
-             {'product' : 'milk', 'available' : false}];
+             {'product' : 'milk', 'available' : false},
+             {'product' : 'yogurt', 'available' : true}];
 
 const arr2 = [{'product' : 'cheese', 'available' : false},    
              {'product' : 'milk', 'available' : false}];
@@ -11,7 +12,7 @@ const arr2 = [{'product' : 'cheese', 'available' : false},
 const nullarr = null;
 
 describe("Filter", () => {
-    it("Function returns an array when a value meets condition", () => {
+    it("Function returns an array when some values meet condition", () => {
         expect(filter(arr1, ({available}) => available )).to.be.an('array')
     });
     it("Function takes a null instead of array", () => {
@@ -21,5 +22,3 @@ describe("Filter", () => {
         expect(filter(arr2, ({available}) => available )).to.be.an('array')
     });
   });
-
-console.log(filter(arr2, ({available}) => available ));
