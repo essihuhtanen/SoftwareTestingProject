@@ -35,19 +35,31 @@ const cheese1 = "gruyere";
 const cheese2 = "gruyere";
   
 describe("Eq", () => {
-    it("Compares if two different objects are equivalent", () => {
+    it("Two different objects are not equivalent", () => {
       expect(eq(object1, object2)).to.deep.equal(false);
     });
 
-    it("Compares if two equal looking objects are equivalent", () => {
+    it("Two equal looking objects are not equivalent", () => {
         expect(eq(object2, object3)).to.equal(false);
     });
 
-    it("Compares if two equal objects are equivalent", () => {
+    it("Two equal objects are equivalent", () => {
         expect(eq(object2, object2)).to.equal(true);
     });
 
-    it("Compares if two equal cheeses are equivalent", () => {
+    it("Two equal cheeses are equivalent", () => {
         expect(eq(cheese1, cheese2)).to.equal(true);
     });
+
+    it("Two equal cheeses (variable + string) are equivalent", () => {
+        expect(eq(cheese1, "gruyere")).to.equal(true);
+    });
+
+    it("Two different values (variable + object) are not equivalent", () => {
+        expect(eq(cheese1, object2)).to.equal(false);
+    });
+
+    it("Two null values are equivalent", () => {
+      expect(eq(null, null)).to.equal(true);
+  });
   });
