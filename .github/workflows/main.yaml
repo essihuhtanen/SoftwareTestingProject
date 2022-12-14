@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: ["main"]
+    branches: ["ci_test"]
   workflow_dispatch:
 jobs:
   run-tests:
@@ -11,8 +11,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: npm install and npm test
+      - name: run tests and coverage
         run: |
           npm install
           npm install -g mocha
           mocha ./test/* --reporter ./node_modules/mochawesome
+          npm run coverage

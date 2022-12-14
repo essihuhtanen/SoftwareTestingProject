@@ -3,7 +3,7 @@ import compact from "../src/compact.js";
 const expect = chai.expect;
 
 describe("Compact", () => {
-    // console.log(compact([1,2,null,3])); 
+
     it("Returns an array without null value - check against set of numbers (not an array)", () => {
       expect(compact([2, null, 3, 1])).to.be.an('array').that.includes(1, 2, 3);
     });
