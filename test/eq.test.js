@@ -50,4 +50,12 @@ describe("Eq", () => {
     it("Compares if two equal cheeses are equivalent", () => {
         expect(eq(cheese1, cheese2)).to.equal(true);
     });
+
+    it("Compares if two equal cheeses (variable + string) are equivalent", () => {
+        expect(eq(cheese1, "gruyere")).to.equal(true);
+    });
+
+    it("Compares if two different values (variable + object) are equivalent", () => {
+        expect(eq(cheese1, object2)).to.equal(false);
+    });
   });
